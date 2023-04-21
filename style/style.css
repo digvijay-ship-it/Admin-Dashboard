@@ -1,0 +1,27 @@
+@import '~normalize.css';
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0px;
+}
+.container{
+    height: inherit;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header{
+    grid-column: 2/-1;
+}
+
+.sidebar{
+    background-color: rgb(25,146,212);
+    grid-row: 1/-1 ;
+}
+
+.main-content{
+    background-color: rgb(227,232,241);
+}
