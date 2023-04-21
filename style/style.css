@@ -1,27 +1,83 @@
 @import '~normalize.css';
-html{
+
+html {
     height: 100%;
 }
-body{
+
+body {
     height: 100%;
     margin: 0px;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.container{
+
+.container {
     height: inherit;
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 4fr;
+    border: 2px solid;
 }
 
-.header{
+.header {
     grid-column: 2/-1;
 }
 
-.sidebar{
-    background-color: rgb(25,146,212);
-    grid-row: 1/-1 ;
+.sidebar {
+    background-color: rgb(25, 146, 212);
+    grid-row: 1/-1;
+    display: grid;
+    color: white;
+
+    grid-template-rows: 1fr 3fr 3fr;
+    row-gap: 50px;
 }
 
-.main-content{
-    background-color: rgb(227,232,241);
+.sidebarTop,
+.sidebarMid,
+.sidebarLow {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+}
+
+.sidebarTop {
+    grid-row: 1/2;
+}
+
+.sidebarTop h3 {
+    align-self: center;
+}
+
+.sidebarMid {
+    grid-template-rows: repeat(6, 30px);
+    grid-row: 2/3;
+}
+
+.sidebar h5 {
+    margin: 0px;
+    align-self: center;
+}
+
+.sidebarLow {
+    grid-template-rows: repeat(3, 30px);
+    grid-row: 3/4;
+}
+
+.main-content {
+    background-color: rgb(227, 232, 241);
+}
+
+.sidebar img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+
+    /* fill: white; */
+}
+
+/* dont work */
+svg {
+    fill: aliceblue;
 }
