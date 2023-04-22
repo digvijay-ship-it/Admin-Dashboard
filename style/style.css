@@ -7,19 +7,21 @@ html {
 body {
     height: 100%;
     margin: 0px;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    /* font size var */
+    --First-class-head-line-font-size: 18px;
+    --First-class-head-line-font-weight: 800;
+    --second-class-head-line-font-size: 14px;
+    --second-class-head-line-font-weight: 600;
+
 }
 
 .container {
     height: inherit;
     display: grid;
     grid-template-rows: 1fr 5fr;
-    grid-template-columns: 1fr 4fr;
-    border: 2px solid;
-}
-
-.header {
-    grid-column: 2/-1;
+    grid-template-columns: 1fr 5fr;
 }
 
 .sidebar {
@@ -29,14 +31,14 @@ body {
     color: white;
 
     grid-template-rows: 1fr 3fr 3fr;
-    row-gap: 50px;
+    row-gap: 10px;
 }
 
 .sidebarTop,
 .sidebarMid,
 .sidebarLow {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 3fr;
 
 }
 
@@ -44,18 +46,22 @@ body {
     grid-row: 1/2;
 }
 
-.sidebarTop h3 {
+.firstFont {
+    align-self: center;
+    font-size: var(--First-class-head-line);
+    font-weight: var(--First-class-head-line-font-weight);
+}
+
+.secondFont {
+    font-size: var(--second-class-head-line-font-size);
+    font-weight: var(--second-class-head-line-font-weight);
+    margin: 0px;
     align-self: center;
 }
 
 .sidebarMid {
     grid-template-rows: repeat(6, 30px);
     grid-row: 2/3;
-}
-
-.sidebar h5 {
-    margin: 0px;
-    align-self: center;
 }
 
 .sidebarLow {
@@ -68,16 +74,107 @@ body {
 }
 
 .sidebar img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
     align-self: center;
     justify-self: center;
-
-    /* fill: white; */
 }
 
-/* dont work */
-svg {
-    fill: aliceblue;
+/* header section */
+
+.header {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-rows: 50% 40%;
+}
+
+.header * {
+    margin: 0%;
+}
+
+.hTop {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: min-content;
+    align-items: center;
+    column-gap: 150px;
+}
+
+#searchBar {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+}
+
+.topOthers {
+    display: grid;
+    grid-template-columns: 1fr 3fr 7fr;
+}
+
+.topOthers button {
+    border: 0px;
+    background-color: white;
+}
+
+.topOthers h5 {
+    align-self: center;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.specialIcon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+img {
+    justify-self: center;
+    align-self: center;
+}
+
+#searchBar label {
+    justify-self: center;
+}
+
+#searchBar input {
+    border-radius: 10px;
+    border: none;
+    height: 20px;
+    background-color: rgb(226, 232, 240);
+}
+
+.hLow {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    align-items: center;
+}
+
+.Profile {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.hLow div:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(3, 69px);
+    justify-content: space-evenly;
+}
+
+.hLow div:nth-child(3) button {
+    background-color: rgb(25, 146, 212);
+    border: 0px;
+    border-radius: 10px;
+    height: 25px;
+    align-self: center;
+    font-weight: 600;
+    color: white;
+    font-size: .7rem;
 }
