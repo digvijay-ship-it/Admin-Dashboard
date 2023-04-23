@@ -10,17 +10,17 @@ body {
     font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     /* font size var */
-    --First-class-head-line-font-size: 18px;
+    --First-class-head-line-font-size: 20px;
     --First-class-head-line-font-weight: 800;
-    --second-class-head-line-font-size: 14px;
+    --second-class-head-line-font-size: 16px;
     --second-class-head-line-font-weight: 600;
-
+    --third-class-head-line-font-size: 14px;
 }
 
 .container {
     height: inherit;
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 110px 5fr;
     grid-template-columns: 1fr 5fr;
 }
 
@@ -30,8 +30,8 @@ body {
     display: grid;
     color: white;
 
-    grid-template-rows: 1fr 3fr 3fr;
-    row-gap: 10px;
+    grid-template-rows: 80px min-content min-content;
+    row-gap: 30px;
 }
 
 .sidebarTop,
@@ -59,6 +59,13 @@ body {
     align-self: center;
 }
 
+.thirdFont {
+    font-size: var(--third-class-head-line-font-size);
+    font-weight: var(--second-class-head-line-font-weight);
+    margin: 0px;
+    align-self: center;
+}
+
 .sidebarMid {
     grid-template-rows: repeat(6, 30px);
     grid-row: 2/3;
@@ -69,21 +76,12 @@ body {
     grid-row: 3/4;
 }
 
-.main-content {
-    background-color: rgb(227, 232, 241);
-}
-
-.sidebar img {
-    align-self: center;
-    justify-self: center;
-}
-
 /* header section */
 
 .header {
     grid-column: 2/-1;
     display: grid;
-    grid-template-rows: 50% 40%;
+    grid-template-rows: 50% 50%;
 }
 
 .header * {
@@ -111,17 +109,12 @@ body {
 }
 
 .topOthers button {
-    border: 0px;
     background-color: white;
 }
 
-.topOthers h5 {
-    align-self: center;
-}
-
 .icon {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -130,11 +123,6 @@ body {
     width: 32px;
     height: 32px;
     object-fit: cover;
-}
-
-img {
-    justify-self: center;
-    align-self: center;
 }
 
 #searchBar label {
@@ -151,7 +139,7 @@ img {
 .hLow {
     align-self: center;
     display: grid;
-    grid-template-columns: 1fr 6fr 4fr;
+    grid-template-columns: 1fr 6fr 3fr;
     align-items: center;
 }
 
@@ -165,16 +153,124 @@ img {
 .hLow div:nth-child(3) {
     display: grid;
     grid-template-columns: repeat(3, 69px);
-    justify-content: space-evenly;
+    justify-content: space-around;
+    /* column-gap: 30px; */
 }
 
 .hLow div:nth-child(3) button {
     background-color: rgb(25, 146, 212);
-    border: 0px;
     border-radius: 10px;
     height: 25px;
     align-self: center;
     font-weight: 600;
     color: white;
     font-size: .7rem;
+}
+
+/* content  */
+
+.content {
+    background-color: rgb(227, 232, 241);
+
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 3fr 2fr;
+}
+
+.content>* {
+    margin: 20px;
+}
+
+.contentMain {
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+}
+
+button {
+    border: 0px;
+    padding: 0px;
+    background: none;
+}
+
+.projectDescription {
+    color: rgb(101, 100, 100);
+}
+
+.bodyMainContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+
+.bodyMainContentChild {
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    border-left: rgb(189, 250, 123) solid .4rem;
+    border-radius: 10px;
+}
+
+.featuresOnProject {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    column-gap: 20px;
+}
+
+.sideTop,
+.sideBottom {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    background-color: rgb(227, 232, 241);
+}
+
+
+.bodySideTop {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.bodySideBottom {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    align-items: center;
+}
+
+.bodySideTop>.subRapper {
+    padding: 20px;
+    background-color: white;
+    display: grid;
+    row-gap: 2px;
+}
+
+.sub {
+    background-color: white;
+    align-self: center;
+}
+
+.bodySideBottomChild {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.trendingProfiles {
+    align-self: center;
+}
+
+button img {
+    border: 0px;
+    padding: 0px;
+    background: none;
+    object-fit: unset;
+}
+
+img {
+    align-self: center;
+    justify-self: center;
 }
